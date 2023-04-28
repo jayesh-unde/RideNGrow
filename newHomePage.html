@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple HTML HomePage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* CSS for header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000000;
+      height: 60px;
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: 'Sriracha', cursive;
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 100px;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #000000;
+      margin-right: 100px;
+      height: 80px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #ffffff;
+      padding: 35px 20px;
+    }
+    .nav-items a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 1em;
+}
+
+.nav-items a:hover {
+  text-decoration: underline;
+  color: #88ba7b;
+}
+
+.container {
+  position: relative;
+}
+
+.bg-image {
+  background-image: url("Rider_Home_bg_desktop2x (1).jpg");
+  display: flex;
+      margin-top: 0.1px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 680px;
+      background-color: white;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+}
+
+
+.white-box {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  padding: 0.1em;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 500px;
+  height: 480px;
+}
+.white-box p{
+  padding-left: 2em;
+  padding-right: 2em;
+  font-size: 1.2em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: left;
+  font-weight: lighter;
+  margin-bottom: 30px;
+}
+h1 {
+  font-size: 3.1em;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+label {
+  display: inline-block;
+  width: 30%;
+  margin-right: 5%;
+  font-size: 1.2em;
+  color: #333;
+  text-align: right;
+}
+
+input[type="pick"] {
+  display: inline-block;
+  width: 80%;
+  margin-left: 40px;
+  padding: 0.5em;
+  font-size: 1.2em;
+  color: #000000;
+  border: none;
+  background-color: #e1d2d23a;
+  border-radius: 8px;
+}
+input[type="dest"] {
+  display: inline-block;
+  width: 80%;
+  margin-top: 10px;
+  margin-left: 40px;
+  padding: 0.5em;
+  font-size: 1.2em;
+  color: #000000;
+  border: none;
+  background-color: #e1d2d23a;
+  border-radius: 8px;
+}
+input::placeholder {
+  font-size: 14px;
+  margin-left: 50px; /* change to the desired font size */
+}
+/* Style the connecting line */
+/* .connecting-line {
+  display: inline-block;
+  height: 2px;
+  width: 40%;
+  margin: 1em 0;
+  background-color: #ccc;
+  position: relative;
+  top: -10px;
+} */
+
+button {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.15rem;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 300px;
+  display: block;
+}
+button:hover{
+    background-color: #000000ad;
+}
+
+
+
+
+/* .white-box {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  padding: 0.1em;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 500px;
+  height: 480px;
+}
+
+.white-box h1 {
+  font-size: 3.1em;
+  padding-bottom: 0.5em;
+  font-weight: bolder;
+}
+
+.white-box p {
+  padding-left: 2em;
+  font-size: 1.2em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: left;
+  font-weight: lighter;
+}
+
+.signup-btn,
+.login-btn {
+  align-items: flex-start;
+  margin-top: 1.3em;
+  padding: 0.7em 1em;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1em;
+  font-weight: bold;
+  
+  cursor: pointer;
+}
+
+.signup-btn {
+  color: white;
+  background-color: #000000;
+  margin-right: 1em;
+}
+
+.login-btn {
+  color: rgb(0, 0, 0);
+  background-color: #f3eded;
+}
+.signup-btn:hover{
+      background-color:#1b1b1c;
+}
+.login-btn:hover{
+  background-color: #dfe7de;
+}
+     */
+
+
+    .rectangle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #e9e9ef;
+  color: #000000;
+  height: 120px;
+  width: 100%;
+  
+  box-sizing: border-box;
+}
+
+.rectangle h2 {
+  margin-left: 120px;
+  font-family: 'Sriracha', cursive;
+  color: #333333;
+  font-size: 3.2em;
+}
+
+.rectangle p {
+  margin-left: 20px;
+  font-size: 1.3em;
+  
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 100;
+}
+.safety{
+  font-size: 2.4em;
+  margin-top: 30px;
+  margin-left: 120px;
+  font-weight: bolder;
+}
+
+   /*css code for hero section*/
+
+    .photo-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+
+.photo-block {
+  text-align: center;
+  max-width: 500px;
+}
+
+.photo-block1 img {
+  margin-left: 120px;
+  width: 600px;
+  height: 400px;
+  margin-right: 30px;
+}
+.photo-block2 img {
+  margin-left: 10px;
+  margin-right: 120px;
+  width: 600px;
+  height: 400px;
+}
+
+.photo-block1 h3 {
+  margin-top: 10px;
+  margin-left: 120px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000000;
+}
+.photo-block2 h3 {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000000;
+}
+
+.photo-block1 p {
+  margin-top: 10px;
+  margin-left: 120px;
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: #555555;
+}
+.photo-block2 p {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 120px;
+  font-size: 1.2em;
+  color: #555555;
+}
+
+
+
+    /* CSS for footer */
+    .footer {
+  background-color: #23252A;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px 0;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex-basis: 30%;
+  margin-bottom: 20px;
+}
+
+.footer-section.about p {
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.footer-section h2 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section.social ul {
+  display: flex;
+}
+
+.footer-section.social li {
+  margin-right: 10px;
+}
+
+.footer-section.social a {
+  font-size: 1.2em;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section.social a:hover {
+  color: #6C63FF;
+}
+
+.footer-bottom {
+  background-color: #1A1B1F;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #6C63FF;
+}
+.aim {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.aim-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.aim h2 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333333;
+}
+
+.aim p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #666666;
+}
+
+
+
+.work {
+  text-align: center;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.work-heading {
+  font-size: 45px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.work-text {
+  font-size: 20px;
+  margin-top: 15px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  color: #555;
+}
+.work i {
+  margin-top: 25px;
+  font-size: 40px;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo">RIDE N GROW</a>
+    <nav class="nav-items">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <main>
+
+      <!-- <div class="container">
+        <div class="bg-image">
+          <div class="white-box">
+
+            <h1>Join Our Carpooling Community</h1>
+            <p> >Get in the Driver's seat and get paid.</p>
+            <p> >Reduce your carbon footprint and help protect the environment.</p>
+            <p> >Meet new people and build a community of like-minded travelers.</p>
+            <button class="signup-btn">Sign Up</button>
+            <button class="login-btn">Log In</button>
+          </div>
+        </div>
+      </div> -->
+      <div class="container">
+        <div class="bg-image">
+        <div class="white-box">
+          <h1>Request a Ride Now</h1>
+         
+          <p>Welcome to our carpooling community, where we're dedicated to providing you with fast, reliable, and safe rides to your destination. </p>
+          <p>Request a ride and experience the benefits of carpooling!</p>
+          <form>
+            <label for="pickup-location"></label>
+            <input type="pick" placeholder="Enter pickup location" id="pickup-location" name="pickup-location">
+      
+            <label for="destination"></label>
+            <input type="dest"placeholder="Enter destination" id="destination" name="destination">
+            
+            <button type="submit">Request Ride</button>
+          </form>
+        </div>
+        </div>
+      </div>
+      
+      
+      
+      <section>
+        <div class="rectangle">
+          <h2>Ride N Grow</h2>
+          <p>This is a carpooling platform that connects riders and drivers for more sustainable and affordable transportation.</p>
+        </div>
+      </section>
+      <section class="safety"><div>Focused on safety, wherever you go</div></section>
+      <section class="photo-section">
+        
+        <div class="photo-block1">
+          <img class="im1" src="Safety_Home_Img2x.jpg" alt="Photo 1">
+          <h3>Our commitment to your safety</h3>
+          <p>With every safety feature and every standard in our Community Guidelines, we're committed to helping to create a safe environment for our users.</p>
+        </div>
+        <div class="photo-block2">
+          <img class="im2" src="Cities_Home_Img2x.jpg" alt="Photo 2">
+          <h3>Setting 10,000+ cities in motion</h3>
+          <p>The app is available in thousands of cities worldwide, so you can request a even when you’re far from home.</p>
+        </div>
+      </section>
+      
+    <!-- <div class="achievements">
+      <div class="work">
+        <i class="fas fa-atom"></i>
+        <p class="work-heading">DT Project</p>
+        <p class="work-text">I have worked on many projects and I am very proud of them. I am a very good developer and I am always looking for new projects.</p>
+      </div>
+      <div class="work">
+        <i class="fas fa-user-friends"></i>
+        <p class="work-heading">Our team</p>
+        <p class="work-text">I have a lot of skills and I am very good at them. I am very good at programming and I am always looking for new skills.</p>
+      </div>
+      <div class="work">
+        <i class="fas fa-car"></i>
+        <p class="work-heading">Car pooling</p>
+        <p class="work-text">I have a lot of network skills and I am very good at them. I am very good at networking and I am always looking for new network skills.</p>
+      </div>
+    </div>
+    <div class="about-me">
+      <div class="about-me-text">
+        <h2>About US</h2>
+        <p>I am a web developer and I love to create websites. I am a very good developer and I am always looking for new projects. I am a very good developer and I am always looking for new projects.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="me">
+    </div> -->
+    <section class="Our-team">
+      <div class="work">
+        <i class="fas fa-user-friends"></i>
+        <p class="work-heading">Our Team</p>
+        <p class="work-text">We are a group of 5 college students who built this project in our design thinking lab. Our aim is to promote carpooling and make it more accessible to people, thereby reducing traffic congestion and carbon emissions. Each member of our team has unique skills and expertise, which we leveraged to build this website.</p>
+      </div>
+    </section>
+    
+    <section class="aim">
+      <div class="aim-container">
+        <h2>Our Aim</h2>
+        <p>We aim to reduce traffic congestion, air pollution and parking problems by encouraging carpooling. Our platform connects drivers and riders to share rides and split the costs. By carpooling, we can make our commutes more sustainable and affordable.</p>
+      </div>
+    </section>
+    
+    
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h2 class="logo">Ride N Grow</h2>
+        <p>Find your ride-sharing partner today and start growing together.</p>
+      </div>
+      <div class="footer-section links">
+        <h2>Links</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section social">
+        <h2>Follow Us</h2>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2023 Ride N Grow. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

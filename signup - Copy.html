@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+    <link href="https://fonts.googleapis.com/css?family=Assistant:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="loginStyle.css">
+
+</head>
+
+<body >
+    <!-- partial:index.partial.html
+    <section class='login' id='login'>
+        <div class='msg'><strong>sign up</strong></div>
+        <div class='head'>
+            <h1 class='company'>RIDE AND GROW</h1>
+        </div>
+        <p class='msg'>General information</p>
+        <div class='form'>
+
+            <script>
+                function mypass(){
+                    var a = document.getElementById("pass1").value;
+                    var b = document.getElementById("pass").value;
+
+                    if(a==""){
+                        document.getElementById("messages").innerHTML="** This field is required";
+                        return false;
+                    }
+                    if(a.length < 8){
+                        document.getElementById("messages").innerHTML="** Password length must be greater than 8 characters";
+                        return false;
+                    }
+                    if(a.length > 25){
+                        document.getElementById("messages").innerHTML="** Password length must be shorter than characters";
+                        return false;
+                    }
+
+                    if(b==""){
+                        document.getElementById("message").innerHTML="** This field is required";
+                        return false;
+                    }
+                    if(b.length < 8){
+                        document.getElementById("message").innerHTML="** Password length must be greater than 8 characters";
+                        return false;
+                    }
+                    if(b.length > 25){
+                        document.getElementById("message").innerHTML="** Password length must be shorter than characters";
+                        return false;
+                    }
+
+                    if(a!=b){
+                        document.getElementById("message").innerHTML="** Passwords are not same";
+                        return false;
+                    }
+
+                    return true;
+
+                }
+            </script>
+
+            <form id='signup' onsubmit="return mypass()">
+                <input type="text" placeholder='First Name' class='text' id='firstname' required><br> <br>
+                <input type="text" placeholder='Last Name' class='text' id='lastname' required><br> <br>
+                <input type="text" placeholder='Email' class='text' id='email' required><br> <br>
+
+                <label for="gender">Gender &nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;</label>
+                <select id='gender'>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="others">others</option>
+                </select> 
+                <br> <br>
+
+                <input type="text" placeholder='Mobile number' class='text' id='mobileno' required><br> <br>
+                <div >
+                    <input type="password" placeholder='New password' class='password' id="pass1"> <br>
+                    <span id="messages"> </span>
+                    <input type="password" placeholder='Confirm password' class='password' id='pass'><br>
+                    <span id="message"></span>
+                </div>
+                <br>
+                
+                <div class='msg'><input type="checkbox">
+                    Terms and Conditions are accepted. &nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="submit">SUBMIT</button>
+                    <a href="signup2.html" class="btn-login" id='do-login' action><strong>proceed</strong></a>
+                </div>  
+                
+            </form>
+        </div> -->
+        <!-- partial:index.partial.html -->
+        <style>
+            .login {
+  background:
+#394867;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  border-color: #e6dede;
+  padding: 30px;
+  width: 420px;
+  height: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.head {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.company {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+.msg {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 20px 0;
+}
+
+.text {
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  outline: none;
+  height: 40px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.password {
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  outline: none;
+  height: 40px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+button[type="submit"] {
+  border: none;
+  background: #1c2331;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.btn-login {
+  border: none;
+  background: #f7f9fd;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+.btn-signup:hover
+{
+    background: #e6dede;
+  color: #020a18;
+  border: 1px solid #1c2331;
+  transition: all ease 0.5s;
+
+}
+.btn-login:hover {
+  background: #251616;
+  color: #1c2331;
+  border: 1px solid #1c2331;
+  transition: all ease 0.5s;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+label {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+        </style>
+<section class='login' id='login'>
+    <div class='msg'><strong>Sign up</strong></div>
+    <div class='head'>
+      <h1 class='company'>RIDE N GROW</h1>
+    </div>
+    <p class='msg'>General information</p>
+    <div class='form'>
+      <form id='signup' onsubmit="return mypass()">
+        <input type="text" placeholder='First Name' class='text' id='firstname' required><br><br>
+        <input type="text" placeholder='Last Name' class='text' id='lastname' required><br><br>
+        <input type="text" placeholder='Email' class='text' id='email' required><br><br>
+  
+        <label for="gender" style="margin-right: 10px;">Gender:</label>
+        <select id='gender'>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="others">Others</option>
+        </select> 
+        <br><br>
+  
+        <input type="text" placeholder='Mobile number' class='text' id='mobileno' required><br><br>
+  
+        <div>
+          <input type="password" placeholder='New password' class='password' id="pass1">
+          <br>
+          <span id="messages"></span>
+          <input type="password" placeholder='Confirm password' class='password' id='pass'>
+          <br>
+          <span id="message"></span>
+        </div>
+        <br>
+  
+        <div class='msg'>
+          <input type="checkbox" id="terms">
+          <label for="terms">I accept the Terms and Conditions.</label>
+          <br><br>
+          <button type="submit" class="btn-signup">Sign up</button>
+          <a href="signup2.html" class="btn-login" id='do-login' action><strong>Proceed</strong></a>
+        </div>  
+      </form>
+    </div>
+  </section>
+  
+
+
+</body>
+</html>
